@@ -32,8 +32,8 @@ body {
 .miniTitleDiv {
     position: relative;
     background-color: #8f8f8f;
-    width: 1300px;
-    height: 300px;
+    width: 1000px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +43,32 @@ body {
     border-radius: 50px;
     overflow:hidden;
     position: relative;
+    opacity: 0.8;
+}
+
+.videoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow:hidden;
+    position: relative;
+}
+
+.articleHeaders {
+    font-family: "Teko";
+    color: white;
+    font-size: 75px;
+}
+
+.articleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.comparisonParagraphs {
+    color:white; width: 60%; 
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 22px;
 }
