@@ -1,0 +1,46 @@
+body {
+    background-color: black
+}
+
+.titleDivs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 600px;
+    border-style: solid;
+    border-color: #ffb800;
+    overflow:hidden;
+    position: relative;
+}
+
+.titles {
+    font-family: "Bebas Neue";
+    font-size: 100px;
+    color: white;
+}
+
+.bgImg {
+    opacity: 0.3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.miniTitleDiv {
+    position: relative;
+    background-color: #8f8f8f;
+    width: 1300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-style: solid;
+    border-color: #00ceff;
+    border-radius: 50px;
+    overflow:hidden;
+    position: relative;
+}
