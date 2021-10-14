@@ -8,8 +8,6 @@ body {
     align-items: center;
     flex-direction: row;
     height: 600px;
-    border-style: solid;
-    border-color: #ff9900;
     overflow:hidden;
     position: relative;
 }
@@ -20,8 +18,6 @@ body {
     align-items: center;
     flex-direction: row;
     height: 990px;
-    border-style: solid;
-    border-color: #ff9900;
     overflow:hidden;
     position: relative;
 }
