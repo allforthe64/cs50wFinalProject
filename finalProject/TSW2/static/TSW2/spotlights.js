@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    var bakerloo = document.querySelector('#bakerloo');
+    bakerloo.style.display='none';
+
+    var german = document.querySelector('#german');
+    german.style.display='none';
     
     //query page for all buttons
     document.querySelectorAll("#selectorButton").forEach(item => {
