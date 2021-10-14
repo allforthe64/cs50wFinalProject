@@ -1,0 +1,23 @@
+{% extends "TSW2/layout.html" %}
+{% load static %}
+
+{% block body %}  
+    <div class="titleDivsLg">
+        <img src="https://williamraineyapplication.files.wordpress.com/2021/10/location-spotlights-1.png" class="bgImg">
+    </div>
+    <br>
+    <br>
+    <div class="container" style="display: flex; justify-content:center">
+        <div class="btn-group" role="group" style="width: 100%">
+            <button type="button" class="btn btn-secondary">CSX's Sandpatch Grade</button>
+            <button type="button" class="btn btn-secondary">The Bakerloo Line</button>
+            <button type="button" class="btn btn-secondary">Schnellfahrstrecke Köln-Aachen</button>
+        </div>
+    </div>
+    <br>
+    <br>
+{% endblock %}
+
+{% block script %}  
+    <script src="{% static 'TSW2/spotlights.js' %}"></script>
+{% endblock %} 

@@ -6,3 +6,6 @@ def index(request):
 
 def comparison(request):
     return render(request, "TSW2/comparison.html")
+
+def spotlights(request):
+    return render(request, "TSW2/spotlights.html")

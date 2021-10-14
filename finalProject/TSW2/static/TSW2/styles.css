@@ -12,6 +12,17 @@ body {
     position: relative;
 }
 
+
+.titleDivsM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 900px;
+    overflow:hidden;
+    position: relative;
+}
+
 .titleDivsLg {
     display: flex;
     justify-content: center;
