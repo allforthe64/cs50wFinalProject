@@ -9,3 +9,6 @@ def comparison(request):
 
 def spotlights(request):
     return render(request, "TSW2/spotlights.html")
+
+def compendium(request):
+    return render(request, "TSW2/compendium.html")
