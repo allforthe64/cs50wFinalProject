@@ -12,9 +12,26 @@
     <br>
     <br>
     <div class="articleContainer">
-        <p class="comparisonParagraphs" style="font-size: 35px; text-align: center;">Want to find out a bit more about some of the freight cars and locomotives
-        featurted in Train Sim World 2? Use the interactive window below to find details on your favorite items from Train Sim World 2. Want to add an entry for a newly
+        <p class="comparisonParagraphs" style="font-size: 35px; text-align: center;">Want to find out a bit more about some of the freight cars, passengers cars, and locomotives
+        featured in Train Sim World 2? Use the interactive window below to find details on your favorite items from Train Sim World 2. Want to add an entry for a newly
         added engine or freight car? No problem! Fill out a new entry and update the database with the new asset!</p>
     </div>
+    <br>
+    <br>
+    <br>
+    <div class="jumbotron" style="display: flex; width: 80%; margin-left: 10%; background-color: rgb(121, 121, 121); justify-content: center;">
+        <div style="display: flex;">
+            <p class="articleHeaders" style="font-size: 50px;">Sort By:</p>
+            <p class="compHeaders" style="margin-left: 50px;" id="locomotive">Locomotives</p>
+            <p class="compHeaders" style="margin-left: 50px;" id="freight">Freight Cars</p>
+            <p class="compHeaders" style="margin-left: 50px;" id="passenger" value="passenger">Passenger Cars</p>
+        </div>
+        
+    </div>
+    <br>
+    <br>
 {% endblock %} 
 
+{% block script %}  
+    <script src="{% static 'TSW2/compendium.js' %}"></script>
+{% endblock %} 

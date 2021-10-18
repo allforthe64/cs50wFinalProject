@@ -80,6 +80,16 @@ body {
     font-size: 75px;
 }
 
+.compHeaders {
+    font-family: "Teko";
+    color: rgb(248, 239, 207);
+    font-size: 50px;
+}
+
+.compHeaders:hover {
+    color: black;
+}
+
 .articleContainer {
     display: flex;
     justify-content: center;
