@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.style.backgroundColor = "white";
                             div.style.marginTop = "5%";
                             div.style.borderRadius = "30px";
-                            div.style.boxShadow = "10px 5px 30px #000000"
+                            div.style.boxShadow = "10px 5px 30px #000000";
 
                             //append main div to hero element
                             var jumbo = document.querySelector(".jumbotron");
@@ -103,6 +103,19 @@ document.addEventListener('DOMContentLoaded', function() {
                             location.style.marginLeft = "10%";
                             location.style.color = "black";
                             div1.appendChild(location);
+
+                            div.appendChild(document.createElement("br"));
+
+                            //image
+                            var img = document.createElement('img');
+                            img.src = result[i]["image"];
+                            img.style.width = "50%";
+                            img.style.height = "30%";
+                            img.style.marginLeft = "10%";
+                            img.style.marginBottom = "10%";
+                            img.style.border = "1px solid black";
+                            img.style.boxShadow = "5px 5px 10px #000000";
+                            div.appendChild(img);
 
                             div.appendChild(document.createElement("br"));
 

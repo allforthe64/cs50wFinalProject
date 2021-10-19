@@ -13,6 +13,7 @@ class Locos(models.Model):
     hp = models.IntegerField()
     axles = models.IntegerField()
     location = models.CharField(max_length = 64, default = None)
+    image = models.URLField(default = None)
 
     def serialize(self):
         return {
@@ -25,8 +26,23 @@ class Locos(models.Model):
             "speed": self.maximum_speed,
             "hp": self.hp,
             "axles": self.axles,
-            "location": self.location
+            "location": self.location,
+            "image": self.image
         }
     
+class Freight(models.Model):
+    freight_id = models.AutoField(primary_key = True, default = None)
+    length = models.IntegerField()
+    width = models.IntegerField()
+    height = models.IntegerField()
+    load = models.IntegerField()
 
+    def serialize(self):
+        return {
+            "id": self.freight_id,
+            "length": self.length,
+            "width": self.width,
+            "height": self.height,
+            "load": self.load
+        }
     
