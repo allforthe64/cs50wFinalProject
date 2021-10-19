@@ -222,6 +222,97 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                     })
             }
+
+            if (item.id == "freight") {
+
+                //clear all elements out of jumbotron
+                var jumbo = document.querySelector(".jumbotron");
+                jumbo.querySelectorAll('.container').forEach(item => {
+                    item.remove();
+                })
+
+                fetch("/freight")
+                    .then(response => response.json())
+                    .then(result => {
+                        
+                        for (let i = 0; i < result.length; i ++) {
+                            //create a new div
+                            var div = document.createElement('div');
+                            div.className = "container";
+                            div.style.backgroundColor = "white";
+                            div.style.marginTop = "5%";
+                            div.style.borderRadius = "30px";
+                            div.style.boxShadow = "10px 5px 30px #000000";
+
+                            //append main div to hero element
+                            var jumbo = document.querySelector(".jumbotron");
+                            jumbo.appendChild(div);
+
+                            //create second div and append to main div
+                            var div1 = document.createElement('div');
+                            div1.style.lineHeight = "12px";
+                            div.appendChild(div1)
+
+                            //append spacing element to second div
+                            var br = document.createElement('br');
+                            div1.appendChild(br);
+
+                            //create the freight car name header
+                            var freight_name = document.createElement("p");
+                            freight_name.className = "articleHeaders";
+                            freight_name.innerHTML = `${result[i]["name"]}`;
+                            freight_name.style.color = "black";
+                            freight_name.style.marginLeft = "5%";
+                            freight_name.style.marginTop = "7%";
+                            div1.appendChild(freight_name);
+
+                            //create the freight car length holder
+                            var length = document.createElement("p");
+                            length.className = "comparisonParagraphs";
+                            length.innerHTML = `Length: ${result[i]["length"]}`;
+                            length.style.marginLeft = "10%";
+                            length.style.marginTop = "7%";
+                            length.style.color = "black";
+                            div1.appendChild(length);
+
+                            //create the freight car width holder
+                            var width = document.createElement("p");
+                            width.className = "comparisonParagraphs";
+                            width.innerHTML = `Width: ${result[i]["width"]}`;
+                            width.style.marginLeft = "10%";
+                            width.style.color = "black";
+                            div1.appendChild(width);
+
+                            //create the freight car width holder
+                            var height = document.createElement("p");
+                            height.className = "comparisonParagraphs";
+                            height.innerHTML = `Height: ${result[i]["height"]}`;
+                            height.style.marginLeft = "10%";
+                            height.style.color = "black";
+                            div1.appendChild(height);
+
+                             //create the freight car load holder
+                             var load = document.createElement("p");
+                             load.className = "comparisonParagraphs";
+                             load.innerHTML = `Max Load: ${result[i]["load"]} Tons`;
+                             load.style.marginLeft = "10%";
+                             load.style.color = "black";
+                             div1.appendChild(load);
+
+                            div.appendChild(document.createElement("br"));
+
+                            //image
+                            var img = document.createElement('img');
+                            img.src = result[i]["image"];
+                            img.style.width = "50%";
+                            img.style.height = "30%";
+                            img.style.marginLeft = "10%";
+                            img.style.marginBottom = "5%";
+                            img.style.border = "1px solid black";
+                            div.appendChild(img);
+                        }   
+                    })
+            }
         })
     })
 })

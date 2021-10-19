@@ -8,5 +8,6 @@ urlpatterns = [
     path("LocationSpotlights", views.spotlights, name="spotlights"),
     path("compendium", views.compendium, name="compendium"),
     path("locomotives", views.locomotives, name="locomotives"),
-    path("passenger", views.passenger, name="passenger")
+    path("passenger", views.passenger, name="passenger"),
+    path("freight", views.freight, name="freight")
 ]

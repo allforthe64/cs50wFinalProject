@@ -30,3 +30,9 @@ def passenger(request):
     queryset = Passenger.objects.all()
     return JsonResponse([q.serialize() for q in queryset], safe=False)
 
+@csrf_exempt
+def freight(request):
+
+    queryset = Freight.objects.all()
+    return JsonResponse([q.serialize() for q in queryset], safe=False)
+
