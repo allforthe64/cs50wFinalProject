@@ -10,7 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         //reference result[i]["fieldname"]
 
-                        
+                        for (let i = 0; i < result.length; i ++) {
+                            
+                            //create a new div
+                            var div = document.createElement('div');
+                            div.className = "entryContainer";
+
+                            var jumbo = document.querySelector(".jumbotron");
+
+                            jumbo.appendChild(div);
+                        }
                     })
             }
         })
