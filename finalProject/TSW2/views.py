@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.serializers import serialize
-from .models import Locos
+from .models import Locos, Freight, Passenger
 
 # Create your views here.
 def index(request):
@@ -22,5 +22,11 @@ def compendium(request):
 def locomotives(request):
 
     queryset = Locos.objects.all()
+    return JsonResponse([q.serialize() for q in queryset], safe=False)
+
+@csrf_exempt
+def passenger(request):
+
+    queryset = Passenger.objects.all()
     return JsonResponse([q.serialize() for q in queryset], safe=False)
 

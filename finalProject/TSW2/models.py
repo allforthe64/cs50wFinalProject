@@ -32,17 +32,42 @@ class Locos(models.Model):
     
 class Freight(models.Model):
     freight_id = models.AutoField(primary_key = True, default = None)
-    length = models.IntegerField()
-    width = models.IntegerField()
-    height = models.IntegerField()
+    name = models.CharField(max_length = 64, default = None)
+    length = models.CharField(max_length = 64, default = None)
+    width = models.CharField(max_length = 64, default = None)
+    height = models.CharField(max_length = 64, default = None)
     load = models.IntegerField()
+    image = models.URLField(default = None)
 
     def serialize(self):
         return {
             "id": self.freight_id,
+            "name": self.name,
             "length": self.length,
             "width": self.width,
             "height": self.height,
-            "load": self.load
+            "load": self.load,
+            "image": self.image
         }
+
+class Passenger(models.Model):
+    passenger_id = models.AutoField(primary_key = True, default = None)
+    name = models.CharField(max_length = 64, default = None)
+    length = models.CharField(max_length = 64, default = None)
+    width = models.CharField(max_length = 64, default = None)
+    height = models.CharField(max_length = 64, default = None)
+    capacity = models.IntegerField(default = None)
+    image = models.URLField(default = None)
+
+    def serialize(self):
+        return {
+            "id": self.passenger_id,
+            "name": self.name,
+            "length": self.length,
+            "width": self.width,
+            "height": self.height,
+            "capacity": self.capacity,
+            "image": self.image
+        }
+
     

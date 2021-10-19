@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener("click", event => {
             
             if (item.id == "locomotive") {
+
+                //clear all elements out of jumbotron
+                var jumbo = document.querySelector(".jumbotron");
+                jumbo.querySelectorAll('.container').forEach(item => {
+                    item.remove();
+                })
+
                 fetch("/locomotives")
                     .then(response => response.json())
                     .then(result => {
@@ -26,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                             //create second div and append to main div
                             var div1 = document.createElement('div');
+                            div1.style.lineHeight = "12px";
                             div.appendChild(div1)
 
                             //append spacing element to second div
@@ -38,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             loco_name.innerHTML = `${result[i]["modelName"]}`;
                             loco_name.style.color = "black";
                             loco_name.style.marginLeft = "5%";
+                            loco_name.style.marginTop = "5%";
                             div1.appendChild(loco_name);
 
                             //create the locomotive type holder
@@ -45,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             loco_type.className = "comparisonParagraphs";
                             loco_type.innerHTML = `Locomotive Type: ${result[i]["modelType"]}`;
                             loco_type.style.marginLeft = "10%";
+                            loco_type.style.marginTop = "5%";
                             loco_type.style.color = "black";
                             div1.appendChild(loco_type);
 
@@ -112,15 +122,104 @@ document.addEventListener('DOMContentLoaded', function() {
                             img.style.width = "50%";
                             img.style.height = "30%";
                             img.style.marginLeft = "10%";
-                            img.style.marginBottom = "10%";
+                            img.style.marginBottom = "5%";
                             img.style.border = "1px solid black";
-                            img.style.boxShadow = "5px 5px 10px #000000";
                             div.appendChild(img);
+
+                        }
+                    })
+            } 
+
+            //passenger cars
+            if (item.id == "passenger") {
+                
+                //clear all elements out of jumbotron
+                var jumbo = document.querySelector(".jumbotron");
+                jumbo.querySelectorAll('.container').forEach(item => {
+                    item.remove();
+                })
+
+                fetch("/passenger")
+                    .then(response => response.json())
+                    .then(result => {
+                        
+                        for (let i = 0; i < result.length; i ++) {
+                            //create a new div
+                            var div = document.createElement('div');
+                            div.className = "container";
+                            div.style.backgroundColor = "white";
+                            div.style.marginTop = "5%";
+                            div.style.borderRadius = "30px";
+                            div.style.boxShadow = "10px 5px 30px #000000";
+
+                            //append main div to hero element
+                            var jumbo = document.querySelector(".jumbotron");
+                            jumbo.appendChild(div);
+
+                            //create second div and append to main div
+                            var div1 = document.createElement('div');
+                            div1.style.lineHeight = "12px";
+                            div.appendChild(div1)
+
+                            //append spacing element to second div
+                            var br = document.createElement('br');
+                            div1.appendChild(br);
+
+                            //create the passenger car name header
+                            var passenger_name = document.createElement("p");
+                            passenger_name.className = "articleHeaders";
+                            passenger_name.innerHTML = `${result[i]["name"]}`;
+                            passenger_name.style.color = "black";
+                            passenger_name.style.marginLeft = "5%";
+                            passenger_name.style.marginTop = "7%";
+                            div1.appendChild(passenger_name);
+
+                            //create the passenger car length holder
+                            var length = document.createElement("p");
+                            length.className = "comparisonParagraphs";
+                            length.innerHTML = `Length: ${result[i]["length"]}`;
+                            length.style.marginLeft = "10%";
+                            length.style.marginTop = "7%";
+                            length.style.color = "black";
+                            div1.appendChild(length);
+
+                            //create the passenger car width holder
+                            var width = document.createElement("p");
+                            width.className = "comparisonParagraphs";
+                            width.innerHTML = `Width: ${result[i]["width"]}`;
+                            width.style.marginLeft = "10%";
+                            width.style.color = "black";
+                            div1.appendChild(width);
+
+                            //create the passenger car width holder
+                            var height = document.createElement("p");
+                            height.className = "comparisonParagraphs";
+                            height.innerHTML = `Height: ${result[i]["height"]}`;
+                            height.style.marginLeft = "10%";
+                            height.style.color = "black";
+                            div1.appendChild(height);
+
+                            //create the passenger car width holder
+                            var capacity = document.createElement("p");
+                            capacity.className = "comparisonParagraphs";
+                            capacity.innerHTML = `Capacity: ${result[i]["capacity"]} Passengers`;
+                            capacity.style.marginLeft = "10%";
+                            capacity.style.color = "black";
+                            div1.appendChild(capacity);
 
                             div.appendChild(document.createElement("br"));
 
-                            
+                            //image
+                            var img = document.createElement('img');
+                            img.src = result[i]["image"];
+                            img.style.width = "50%";
+                            img.style.height = "30%";
+                            img.style.marginLeft = "10%";
+                            img.style.marginBottom = "5%";
+                            img.style.border = "1px solid black";
+                            div.appendChild(img);
                         }
+                        
                     })
             }
         })
