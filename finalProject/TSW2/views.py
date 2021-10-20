@@ -52,10 +52,15 @@ def create(request, Type):
     elif Type == "freight":
         data = json.loads(request.body)
 
-        print(data["image"])
-
         F = Freight(name=data["name"], length=data["length"], width=data["width"], height=data["height"], load=data["load"], image=data["image"])
         F.save()
 
         return HttpResponse(status=204)
 
+    else:
+        data = json.loads(request.body)
+
+        P = Passenger(name=data["name"], length=data["length"], width=data["width"], height=data["height"], capacity=data["load"], image=data["image"])
+        P.save()
+
+        return HttpResponse(status=204)

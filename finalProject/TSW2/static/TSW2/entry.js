@@ -29,6 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
 
+        document.querySelector("#locoName").value = "";
+        document.querySelector("#locoType").value = "";
+        document.querySelector("#locoPowerType").value = "";
+        document.querySelector("#locoLength").value = "";
+        document.querySelector("#locoHeight").value = "";
+        document.querySelector("#locoSpeed").value = "";
+        document.querySelector("#locoHp").value = "";
+        document.querySelector("#locoAxles").value = "";
+        document.querySelector("#locoAxles").value = "";
+        document.querySelector("#imageUrl").value = "";
         
     })
 
@@ -54,5 +64,44 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
         alert("Added Entry!");
+
+        document.querySelector("#freightName").value = "";
+        document.querySelector("#freightLength").value = "";
+        document.querySelector("#freightWidth").value = "";
+        document.querySelector("#freightHeight").value = "";
+        document.querySelector("#freightCapacity").value = "";
+        document.querySelector("#imageUrlFreight").value = "";
+
+    })
+
+    document.querySelector("#passengerButton").addEventListener("click", event => {
+        var name = document.querySelector("#passengerName").value;
+        var length = document.querySelector("#passengerLength").value;
+        var width = document.querySelector("#passengerWidth").value;
+        var height = document.querySelector("#passengerHeight").value;
+        var capacity = document.querySelector("#passengerCapacity").value;
+        var image = document.querySelector("#imageUrlPassenger").value;
+
+        console.log(image)
+
+        fetch("/create/passenger", {
+            method: "PUT",
+            body: JSON.stringify({
+                name: name,
+                length: length,
+                width: width,
+                height: height,
+                load: capacity,
+                image: image
+            })
+        })
+        alert("Added Entry!");
+
+        document.querySelector("#passengerName").value = "";
+        document.querySelector("#passengerLength").value = "";
+        document.querySelector("#passengerWidth").value = "";
+        document.querySelector("#passengerHeight").value = "";
+        document.querySelector("#passengerCapacity").value = "";
+        document.querySelector("#imageUrlPassenger").value = "";
     })
 })
