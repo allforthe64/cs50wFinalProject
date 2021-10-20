@@ -49,8 +49,10 @@ def create(request, Type):
 
         return HttpResponse(status=204)
     
-    elif Type == "frieght":
+    elif Type == "freight":
         data = json.loads(request.body)
+
+        print(data["image"])
 
         F = Freight(name=data["name"], length=data["length"], width=data["width"], height=data["height"], load=data["load"], image=data["image"])
         F.save()

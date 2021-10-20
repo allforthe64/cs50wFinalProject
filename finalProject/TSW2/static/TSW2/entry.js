@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
         var width = document.querySelector("#freightWidth").value;
         var height = document.querySelector("#freightHeight").value;
         var capacity = document.querySelector("#freightCapacity").value;
-        var image = document.querySelector("#imageUrlFreight")
+        var image = document.querySelector("#imageUrlFreight").value;
+
+        console.log(image)
 
         fetch("/create/freight", {
             method: "PUT",
