@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector("#locoButton").addEventListener("click", item => {
-        
-        alert("js is working");
 
         var loco_name = document.querySelector("#locoName").value;
         var loco_type = document.querySelector("#locoType").value;
@@ -30,5 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 url: image
             })
         })
+
+        alert("Added Entry!");
     })
 })
