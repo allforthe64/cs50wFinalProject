@@ -8,7 +8,7 @@
     <br>
     <br>
     <br>
-    <hr style="background-color: rgb(248, 239, 207);">;">
+    <hr style="background-color: rgb(248, 239, 207); width: 80%">;">
     <br>
     <br>
     <div class="articleContainer">
@@ -24,6 +24,56 @@
             <p class="compHeaders" style="margin-left: 50px;" id="locomotive">Locomotives</p>
             <p class="compHeaders" style="margin-left: 50px;" id="freight">Freight Cars</p>
             <p class="compHeaders" style="margin-left: 50px;" id="passenger" value="passenger">Passenger Cars</p>
+        </div>
+        <div class="jumbo">
+        </div>
+        <br>
+        <div  id="addLoco">
+            <hr style="background-color: rgb(248, 239, 207); width: 80%">
+            <br>
+            <div style="margin-left: 6%">
+                <p class="articleHeaders">Add An Entry:</p>
+                <br>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Type:</p>
+                    <select class="form-select" id="locoType" style="margin-top: 1.5%; margin-left: 2%; width:10%; height: 35px; border-radius: 5px;" required>
+                        <option value="Freight">Freight</option>
+                        <option calue="Passenger">Passenger</option>
+                    </select>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Name:</p>
+                    <input type="text" class="form-control" id="locoType" style="margin-top: 1%; margin-left: 2%; width:40%" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Power Type:</p>
+                    <input type="text" class="form-control" id="locoPowerType" style="margin-top: 1%; margin-left: 2%; width:40%" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Length:</p>
+                    <input type="text" class="form-control" id="locoLength" style="margin-top: 1%; margin-left: 2%; width:20%" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Height:</p>
+                    <input type="text" class="form-control" id="locoHeight" style="margin-top: 1%; margin-left: 2%; width:20%" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px;">Enter Locomotive Top Speed (In mph):</p>
+                    <input type="number" class="form-control" id="locoSpeed" style="margin-top: 1%; margin-left: 2%; width:20%" min="1" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Locomotive Horse Power:</p>
+                    <input type="number" class="form-control" id="locoHp" style="margin-top: 1%; margin-left: 2%; width:20%" min="1" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter Number Of Axels On Locomotive:</p>
+                    <input type="number" class="form-control" id="locoAxles" style="margin-top: 1%; margin-left: 2%; width:20%" min="1" required>
+                </div>
+                <div style="display: inline-flex; width: 100%">
+                    <p class="articleHeaders" style="font-size: 50px; ">Enter URL For Image (optional):</p>
+                    <input type="url" class="form-control" id="imageUrl" style="margin-top: 1%; margin-left: 2%; width:40%">
+                </div>
+            </div>
         </div>
         <br>
         <br>

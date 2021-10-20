@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    //hide all of the add entry areas
+    document.querySelector("#addLoco").style.display = "none";
+
     document.querySelectorAll(".compHeaders").forEach(item => {
         item.addEventListener("click", event => {
             
@@ -28,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.style.boxShadow = "10px 5px 30px #000000";
 
                             //append main div to hero element
-                            var jumbo = document.querySelector(".jumbotron");
+                            var jumbo = document.querySelector(".jumbo");
                             jumbo.appendChild(div);
 
                             //create second div and append to main div
@@ -128,6 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         }
                     })
+
+                document.querySelector("#addLoco").style.display = "block";
             } 
 
             //passenger cars
@@ -153,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.style.boxShadow = "10px 5px 30px #000000";
 
                             //append main div to hero element
-                            var jumbo = document.querySelector(".jumbotron");
+                            var jumbo = document.querySelector(".jumbo");
                             jumbo.appendChild(div);
 
                             //create second div and append to main div
@@ -221,6 +226,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                         
                     })
+                
+                document.querySelector("#addLoco").style.display = "none";
             }
 
             if (item.id == "freight") {
@@ -245,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.style.boxShadow = "10px 5px 30px #000000";
 
                             //append main div to hero element
-                            var jumbo = document.querySelector(".jumbotron");
+                            var jumbo = document.querySelector(".jumbo");
                             jumbo.appendChild(div);
 
                             //create second div and append to main div
@@ -312,7 +319,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             div.appendChild(img);
                         }   
                     })
+
+                document.querySelector("#addLoco").style.display = "none";
+
             }
+
         })
     })
 })
