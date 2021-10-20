@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //hide all of the add entry areas
     document.querySelector("#addLoco").style.display = "none";
+    document.querySelector("#addFreight").style.display = "none";
 
     document.querySelectorAll(".compHeaders").forEach(item => {
         item.addEventListener("click", event => {
@@ -133,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
 
                 document.querySelector("#addLoco").style.display = "block";
+                document.querySelector("#addFreight").style.display = "none";
             } 
 
             //passenger cars
@@ -228,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
                 
                 document.querySelector("#addLoco").style.display = "none";
+                document.querySelector("#addFreight").style.display = "none";
             }
 
             if (item.id == "freight") {
@@ -321,6 +324,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     })
 
                 document.querySelector("#addLoco").style.display = "none";
+                document.querySelector("#addFreight").style.display = "block";
 
             }
 

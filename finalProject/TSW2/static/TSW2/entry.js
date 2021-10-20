@@ -29,6 +29,28 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         })
 
+        
+    })
+
+    document.querySelector("#freightButton").addEventListener("click", event => {
+        var name = document.querySelector("#freightName").value;
+        var length = document.querySelector("#freightLength").value;
+        var width = document.querySelector("#freightWidth").value;
+        var height = document.querySelector("#freightHeight").value;
+        var capacity = document.querySelector("#freightCapacity").value;
+        var image = document.querySelector("#imageUrlFreight")
+
+        fetch("/create/freight", {
+            method: "PUT",
+            body: JSON.stringify({
+                name: name,
+                length: length,
+                width: width,
+                height: height,
+                load: capacity,
+                image: image
+            })
+        })
         alert("Added Entry!");
     })
 })
