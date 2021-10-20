@@ -36,3 +36,16 @@ def freight(request):
     queryset = Freight.objects.all()
     return JsonResponse([q.serialize() for q in queryset], safe=False)
 
+@csrf_exempt
+def create(request, Type):
+
+    if Type == "loco":
+
+        #get JSON data
+        data = json.loads(request.body)
+
+        L = Locos(loco_type=data["type"], model_name=data["name"], power_type=data["powerType"], length=data["locoLength"], height=data["locoHeight"], maximum_speed=data["locoSpeed"], hp=data["horsePower"], axles=data["locoAxels"], location=data["location"], image=data["url"])
+        L.save()
+
+        return HttpResponse(status=204)
+

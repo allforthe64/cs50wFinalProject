@@ -9,5 +9,6 @@ urlpatterns = [
     path("compendium", views.compendium, name="compendium"),
     path("locomotives", views.locomotives, name="locomotives"),
     path("passenger", views.passenger, name="passenger"),
-    path("freight", views.freight, name="freight")
+    path("freight", views.freight, name="freight"),
+    path("create/<str:Type>", views.create, name="create")
 ]
