@@ -64,3 +64,7 @@ def create(request, Type):
         P.save()
 
         return HttpResponse(status=204)
+
+def showcase(request):
+
+    return render(request, "TSW2/showcase.html")
