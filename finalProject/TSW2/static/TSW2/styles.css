@@ -102,3 +102,11 @@ body {
     font-family: "Roboto";
     font-size: 22px;
 }
+
+.dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: rgb(124, 124, 124);
+    border: 1px solid white;
+}

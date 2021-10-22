@@ -10,6 +10,17 @@
     <br>
     <div class="container" style="display:flex; justify-content: center; width:80%; height: 550px;">
         <img src="https://williamraineyapplication.files.wordpress.com/2021/10/csxs-sandpatch-grade.png">
+        <span class="dot" style="transform: translate(-140px, 485px); background-color: red;" id="1"></span>
+        <span class="dot" style="transform: translate(-139px, 470px);" id="2"></span>
+        <span class="dot" style="transform: translate(-139px, 455px);" id="11"></span>
+        <span class="dot" style="transform: translate(-190px, 497px);" id="10"></span>
+        <span class="dot" style="transform: translate(-220px, 505px);" id="9"></span>
+        <span class="dot" style="transform: translate(-533px, 352px);" id="8"></span>
+        <span class="dot" style="transform: translate(-681px, 192px);" id="7"></span>
+        <span class="dot" style="transform: translate(-695px, 168px);" id="6"></span>
+        <span class="dot" style="transform: translate(-768px, 55px);" id="5"></span>
+        <span class="dot" style="transform: translate(-768px, 40px);" id="4"></span>
+        <span class="dot" style="transform: translate(-805px, 70px);" id="3"></span>
     </div>
     <br>
     <br>
@@ -85,11 +96,11 @@
                 </iframe>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: 20%;">
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: 20%;" id="L">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="margin-right: 20%;">
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="margin-right: 20%;" id="R">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
@@ -98,3 +109,7 @@
   <br>
   <br>
 {% endblock %} 
+
+{% block script %} 
+    <script src="{% static 'TSW2/showcase.js' %}"></script>
+{% endblock %}
