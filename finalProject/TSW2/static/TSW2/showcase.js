@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#R").addEventListener("click", event => {
 
         document.querySelectorAll(".dot").forEach(item => {
-            item.style.backgroundColor = "#7c7c7c";
+            item.style.backgroundColor = "white";
         })
         
         //add one to swap variable
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#L").addEventListener("click", event => {
         
         document.querySelectorAll(".dot").forEach(item => {
-            item.style.backgroundColor = "#7c7c7c";
+            item.style.backgroundColor = "white";
         })
 
         //subtract one from swap variable

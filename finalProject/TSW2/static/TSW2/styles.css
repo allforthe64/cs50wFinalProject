@@ -104,9 +104,9 @@ body {
 }
 
 .dot {
-    height: 12px;
-    width: 12px;
+    height: 17px;
+    width: 17px;
     border-radius: 50%;
-    background-color: rgb(124, 124, 124);
+    background-color: white;
     border: 1px solid white;
 }
