@@ -20,6 +20,19 @@ document.addEventListener('DOMContentLoaded', function () {
         
         //style dot
         dot.style.backgroundColor = "red";
+
+        //swap out the articles
+        document.querySelectorAll(".snippet").forEach(item => {
+            
+            if (item.id == `p${swap}`) {
+                
+                item.style.display = "block";
+            }
+            else {
+                item.style.display = "none";
+            }
+
+        })
     })
 
     document.querySelector("#L").addEventListener("click", event => {
@@ -40,5 +53,17 @@ document.addEventListener('DOMContentLoaded', function () {
         
         //style dot
         dot.style.backgroundColor = "red";
+
+        //swap out the articles
+        document.querySelectorAll(".snippet").forEach(item => {
+            
+            if (item.id == `p${swap}`) {
+                
+                item.style.display = "block";
+            }
+            else {
+                item.style.display = "none";
+            }
+        })
     })
 })
