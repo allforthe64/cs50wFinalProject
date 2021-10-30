@@ -1,7 +1,4 @@
-Course’s Link:
-	See here:
-
-Requirements:
+# **Requirements:**
 * In this project, you are asked to build a web application of your own. The nature of the application is up to you, subject to a few requirements:
   * Your web application must be sufficiently distinct from the other projects in this course (and, in addition, may not be based   on the old CS50W Pizza project), and more complex than those.
   * A project that appears to be a social network is a priori deemed by the staff to be indistinct from Project 4, and should not   be submitted; it will be rejected.
